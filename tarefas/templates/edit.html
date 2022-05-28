@@ -1,0 +1,50 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href='https://css.gg/check.css' rel='stylesheet'>
+        <link href='https://css.gg/close.css' rel='stylesheet'>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Edit Task</title>
+  </head>
+  <body style="background: #252525;">
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a href="/" class="navbar-brand">Edit Task</a>
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-3">
+        </div>
+        <form method="POST">
+          {% csrf_token %}
+        <div class="col-md" style="color: white;">
+          <h1 style="color: white; text-align: center;">Edit Task</h1>
+
+          {{ form | crispy }}
+
+          <input type="submit" class="btn btn-info" value="Editar Tarefa">
+          </form>
+        </div>
+        <br>
+        <br>
+
+        <div class="col-md-3">
+
+        </div>
+        <br>
+        <br>
+
+      </div>
+      <h1>Footer</h1>
+    </div>
+
+  </body>
+</html>
