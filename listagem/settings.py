@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from django.contrib.messages import constants
 from pathlib import Path
 import os
+import django_on_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -142,3 +143,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+
+
+django_on_heroku.settings(locals())
